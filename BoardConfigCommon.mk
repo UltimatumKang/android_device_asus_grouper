@@ -35,10 +35,8 @@ TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
-#ARCH_ARM_USE_NON_NEON_MEMCPY := true
 TARGET_USE_O3 := true
 TARGET_USE_LINARO_STRING_ROUTINES :=true
-#TARGET_USE_LINAROs_MEMCPY :=true
 ifneq (,$(filter true 1,$(TARGET_INCLUDE_EXTRA_CFLAGS)))
 TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
 endif
