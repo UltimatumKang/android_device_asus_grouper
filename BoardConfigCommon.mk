@@ -28,26 +28,12 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR ?= device/asus/grouper/bluetooth
 
 TARGET_BOARD_PLATFORM := tegra3
 TARGET_TEGRA_VERSION := t30
-
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 ARCH_ARM_HAVE_TLS_REGISTER := true
-# TARGET_USE_O3 := true
-TARGET_USE_LINARO_STRING_ROUTINES :=true
-ifneq (,$(filter true 1,$(TARGET_INCLUDE_EXTRA_CFLAGS)))
-TARGET_EXTRA_CFLAGS += $(call cc-option,-mtune=cortex-a9) $(call cc-option,-mcpu=cortex-a9)
-endif
-
-# Set to true for platforms with 32 byte L2 cache line.
-ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
-# Allowing unaligned access for NEON memory instructions. 
-ARCH_ARM_NEON_SUPPORTS_UNALIGNED_ACCESS := true
-# Sets the upper size limit for NEON unaligned memory access in memcpy. 
-BIONIC_MEMCPY_ALIGNMENT_DIVIDER := 224
-
 TARGET_USERIMAGES_USE_EXT4 := true
 
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 681574400
@@ -68,10 +54,9 @@ WIFI_DRIVER_FW_PATH_AP      := "/vendor/firmware/fw_bcmdhd_apsta.bin"
 WIFI_DRIVER_FW_PATH_P2P     := "/vendor/firmware/fw_bcmdhd_p2p.bin"
 
 TARGET_BOOTLOADER_BOARD_NAME := grouper
-
+TARGET_NO_BOOTLOADER := true
 BOARD_USES_GENERIC_AUDIO := false
 BOARD_USES_ALSA_AUDIO := false
-
 BOARD_USES_GENERIC_INVENSENSE := false
 
 BOARD_HAVE_BLUETOOTH := true
