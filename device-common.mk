@@ -61,6 +61,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
 
+
 PRODUCT_COPY_FILES += \
     device/asus/grouper/vold.fstab:system/etc/vold.fstab \
     device/asus/grouper/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
@@ -86,10 +87,6 @@ PRODUCT_PACKAGES += send_bug
 PRODUCT_COPY_FILES += \
     system/extras/bugmailer/bugmailer.sh:system/bin/bugmailer.sh \
     system/extras/bugmailer/send_bug:system/bin/send_bug
-
-# Trickster Mod
-PRODUCT_PACKAGES += \
-    TM
 
 # NFC packages
 PRODUCT_PACKAGES += \
