@@ -1,1 +1,1 @@
-PRODUCT_MAKEFILES += $(LOCAL_DIR)/ukg.mk
+
