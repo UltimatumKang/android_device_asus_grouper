@@ -49,4 +49,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 # hybrid
 PRODUCT_COPY_FILES +=  \
     vendor/ukg/prebuilt/hybrid_tvdpi.conf:system/etc/beerbong/properties.conf
-
